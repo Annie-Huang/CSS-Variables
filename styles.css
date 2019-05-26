@@ -1,5 +1,7 @@
 /* --- Variables --- */
 /*all variable have to be defined within scope, like root, header, body etc.*/
+/* Selects the root element of the document:
+   <html> in the case of HTML */
 :root {
     --theme-color: #3e84da;
     /*--theme-color: pink;*/
@@ -101,4 +103,12 @@ footer .blurb{
     color: #333;
     line-height: 2em;
     font-size: 0.9em
+}
+
+.swatches span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
 }
