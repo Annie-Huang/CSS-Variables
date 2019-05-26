@@ -1,10 +1,24 @@
 /* --- Variables --- */
 /*all variable have to be defined within scope, like root, header, body etc.*/
 :root {
-    /*--theme-color: #3e84da;*/
-    --theme-color: pink;
-    /*--link-color: #daa33e;*/
-    --link-color: #333;
+    --theme-color: #3e84da;
+    /*--theme-color: pink;*/
+    --link-color: #daa33e;
+    /*--link-color: #333;*/
+
+    --layout:1fr 1fr 1fr;
+}
+
+/*very hard to do in scss, maybe need to apply some sort of minixs*/
+nav{
+    --link-color: #000;
+}
+
+/*hard to change with less*/
+@media screen and (max-width: 760px){
+    :root {
+        --layout: 1fr;
+    }
 }
 
 /* --- Main styles --- */
@@ -76,7 +90,7 @@ footer{
 
 footer .blurbs{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: var(--layout);
     max-width: 760px;
     margin: 0 auto;
     grid-gap: 40px;
